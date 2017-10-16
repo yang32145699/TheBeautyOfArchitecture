@@ -32,7 +32,7 @@ public class SwipeableCards: UIView {
     }
     /// Delegate
     
-    public var numberOfVisibleItems = 4
+    public var numberOfVisibleItems = 5
     
     public var offset: (horizon: CGFloat, vertical: CGFloat) = (0, -6)
     

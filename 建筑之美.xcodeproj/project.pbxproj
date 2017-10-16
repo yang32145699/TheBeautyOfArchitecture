@@ -16,12 +16,11 @@
 		3071759E1F5BD29B00CFA0B0 /* MOPhotoPreviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3071759D1F5BD29B00CFA0B0 /* MOPhotoPreviewer.swift */; };
 		307175A01F5BD2A200CFA0B0 /* UIView+MOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3071759F1F5BD2A200CFA0B0 /* UIView+MOExtension.swift */; };
 		30825E9F1F380B7A0009AF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30825E9E1F380B7A0009AF3D /* AppDelegate.swift */; };
-		30825EA11F380B7A0009AF3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30825EA01F380B7A0009AF3D /* ViewController.swift */; };
 		30825EA41F380B7A0009AF3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30825EA21F380B7A0009AF3D /* Main.storyboard */; };
 		30825EA61F380B7A0009AF3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30825EA51F380B7A0009AF3D /* Assets.xcassets */; };
 		30825EA91F380B7A0009AF3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30825EA71F380B7A0009AF3D /* LaunchScreen.storyboard */; };
 		308662FE1F397C3C004FADE5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308662FD1F397C3C004FADE5 /* MapViewController.swift */; };
-		30BA39371F38596F0039189A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BA39361F38596F0039189A /* MenuViewController.swift */; };
+		30F6C3881F774DEE00AA6417 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F6C3871F774DEE00AA6417 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +34,12 @@
 		3071759F1F5BD2A200CFA0B0 /* UIView+MOExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+MOExtension.swift"; sourceTree = "<group>"; };
 		30825E9B1F380B7A0009AF3D /* 建筑之美.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "建筑之美.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30825E9E1F380B7A0009AF3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30825EA01F380B7A0009AF3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30825EA31F380B7A0009AF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30825EA51F380B7A0009AF3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30825EA81F380B7A0009AF3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30825EAA1F380B7A0009AF3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		308662FD1F397C3C004FADE5 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		30BA39361F38596F0039189A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		30F6C3871F774DEE00AA6417 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,17 +74,16 @@
 			isa = PBXGroup;
 			children = (
 				30825EA21F380B7A0009AF3D /* Main.storyboard */,
-				30825EA01F380B7A0009AF3D /* ViewController.swift */,
+				30F6C3871F774DEE00AA6417 /* DetailVC.swift */,
+				304ACD851F48446D00267588 /* MenuTableViewController.swift */,
 				3071759D1F5BD29B00CFA0B0 /* MOPhotoPreviewer.swift */,
 				3071759F1F5BD2A200CFA0B0 /* UIView+MOExtension.swift */,
 				305FED721F5A885B004F5C7F /* SwipeableCardsVC.swift */,
 				305FED741F5A8868004F5C7F /* SwipeableCards.swift */,
-				304ACD851F48446D00267588 /* MenuTableViewController.swift */,
 				304ACD871F4844D500267588 /* MenuTableViewCell.swift */,
 				304ACD891F4845D900267588 /* Arch.swift */,
 				30825E9E1F380B7A0009AF3D /* AppDelegate.swift */,
 				308662FD1F397C3C004FADE5 /* MapViewController.swift */,
-				30BA39361F38596F0039189A /* MenuViewController.swift */,
 				30825EA51F380B7A0009AF3D /* Assets.xcassets */,
 				30825EA71F380B7A0009AF3D /* LaunchScreen.storyboard */,
 				30825EAA1F380B7A0009AF3D /* Info.plist */,
@@ -121,7 +118,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "杨依明";
 				TargetAttributes = {
 					30825E9A1F380B7A0009AF3D = {
@@ -168,11 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30825EA11F380B7A0009AF3D /* ViewController.swift in Sources */,
 				304ACD8A1F4845D900267588 /* Arch.swift in Sources */,
-				30BA39371F38596F0039189A /* MenuViewController.swift in Sources */,
 				305FED731F5A885B004F5C7F /* SwipeableCardsVC.swift in Sources */,
 				3071759E1F5BD29B00CFA0B0 /* MOPhotoPreviewer.swift in Sources */,
+				30F6C3881F774DEE00AA6417 /* DetailVC.swift in Sources */,
 				304ACD881F4844D500267588 /* MenuTableViewCell.swift in Sources */,
 				305FED751F5A8868004F5C7F /* SwipeableCards.swift in Sources */,
 				307175A01F5BD2A200CFA0B0 /* UIView+MOExtension.swift in Sources */,
@@ -214,7 +210,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -222,7 +220,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -264,7 +266,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -272,7 +276,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -303,6 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65J76BS4V3;
 				INFOPLIST_FILE = ArchiEuro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yiming.yang.ArchiEuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +325,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65J76BS4V3;
 				INFOPLIST_FILE = ArchiEuro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yiming.yang.ArchiEuro;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -50,7 +50,7 @@ class MOPhotoPreviewer: UIView, UIScrollViewDelegate {
         scrollView = UIScrollView(frame: UIScreen.main.bounds)
         scrollView?.delegate = self
         scrollView?.bouncesZoom = true
-        scrollView?.maximumZoomScale = 3.0
+        scrollView?.maximumZoomScale = 2.4
         scrollView?.isMultipleTouchEnabled = true
         scrollView?.alwaysBounceVertical = false
         scrollView?.showsVerticalScrollIndicator = false
@@ -79,7 +79,7 @@ class MOPhotoPreviewer: UIView, UIScrollViewDelegate {
         let image: UIImage? = fromTheImageView?.image
         
         // 计算 containerView 的高度
-        if (image?.size.height)! / (image?.size.height)! > self.mo_height / mo_width {
+        if (image?.size.height)! / (image?.size.width)! > self.mo_height / mo_width {
             containerView?.mo_height = floor((image?.size.height)! / ((image?.size.width)! / mo_width))
         }else {
             var height: CGFloat? = (image?.size.height)! / (image?.size.width)! * mo_width
@@ -111,7 +111,7 @@ class MOPhotoPreviewer: UIView, UIScrollViewDelegate {
         
         UIView.animate(withDuration: 0.18, delay: 0.0, options: [.beginFromCurrentState, .curveEaseInOut], animations: {() -> Void in
             self.imageView?.frame = (self.containerView?.bounds)!
-            self.imageView?.transform = CGAffineTransform(scaleX: 1.01, y: 1.01)
+            self.imageView?.transform = CGAffineTransform(scaleX: 1.03, y: 1.03)
         }, completion: {(_ finished: Bool) -> Void in
             UIView.animate(withDuration: 0.18, delay: 0.0, options: [.beginFromCurrentState, .curveEaseInOut], animations: {() -> Void in
                 self.imageView?.transform = CGAffineTransform(scaleX: 1.00, y: 1.00)
@@ -123,6 +123,7 @@ class MOPhotoPreviewer: UIView, UIScrollViewDelegate {
     func dismiss() {
         UIView.animate(withDuration: 0.18, delay: 0.0, options: .curveEaseInOut, animations: {() -> Void in
             let fromRect: CGRect = (self.fromTheImageView?.convert((self.fromTheImageView?.bounds)!, to: self.containerView))!
+
             self.imageView?.contentMode = (self.fromTheImageView?.contentMode)!
             self.imageView?.frame = fromRect
             self.blurBackground?.alpha = 0.01
@@ -173,8 +174,8 @@ class MOPhotoPreviewer: UIView, UIScrollViewDelegate {
     func longPress(_ recognizer: UILongPressGestureRecognizer) {
         // 最好加入状态判断
         if recognizer.state == .began {
-            let alertController = UIAlertController(title: "保存图片", message: nil, preferredStyle: .actionSheet)
-            alertController.addAction(UIAlertAction(title: "保存", style: .default, handler: {(_ action: UIAlertAction) -> Void in
+            let alertController = UIAlertController(title: "分享自定义卡片", message: nil, preferredStyle: .actionSheet)
+            alertController.addAction(UIAlertAction(title: "自定义卡片", style: .default, handler: {(_ action: UIAlertAction) -> Void in
                 PHPhotoLibrary.shared().performChanges({() -> Void in
                     //写入图片到相册
                     PHAssetChangeRequest.creationRequestForAsset(from: (self.fromTheImageView?.image!)!)

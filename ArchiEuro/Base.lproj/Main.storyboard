@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="194-0p-IZy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="194-0p-IZy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,115 +16,208 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Barcelona Pavilion-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Title-->
+        <scene sceneID="xCp-wv-1sq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="建筑之美" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PuI-Mt-DXi" customClass="DetailVC" customModule="建筑之美" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="lVV-b9-DIE"/>
+                        <viewControllerLayoutGuide type="bottom" id="BNl-aA-EZI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="DmM-f0-1FA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHz-XZ-3CR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nie-eg-BTj">
+                                <rect key="frame" x="0.0" y="43" width="375" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="segment 2" translatesAutoresizingMaskIntoConstraints="NO" id="foH-FG-0YE" userLabel="Detail Pic2">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="1212"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GR2-6H-Des">
+                                        <rect key="frame" x="0.0" y="-21" width="375" height="213"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="segment 3" translatesAutoresizingMaskIntoConstraints="NO" id="JHv-qK-LAT" userLabel="Detail Pic3">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="1212"/>
+                                    <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Brg-UA-RH3">
+                                        <rect key="frame" x="156" y="70" width="62" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="segment 1" translatesAutoresizingMaskIntoConstraints="NO" id="zBr-md-7eS" userLabel="Detail Pic1">
-                                        <rect key="frame" x="0.0" y="280" width="375" height="1212"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="fq7-pd-lys">
-                                        <rect key="frame" x="0.0" y="-64" width="375" height="226"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o50-BI-4Qt">
-                                        <rect key="frame" x="0.0" y="163" width="375" height="79"/>
+                                        <state key="normal" image="playButton"/>
+                                    </button>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nv5-ZE-Tal">
+                                        <rect key="frame" x="-1" y="357" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="u9k-3o-fVH">
-                                                <rect key="frame" x="1" y="0.0" width="126" height="79"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zol-fY-BD5">
+                                                <rect key="frame" x="8" y="0.0" width="245" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-5D-ErA">
-                                                <rect key="frame" x="128" y="0.0" width="120" height="79"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eo5-NJ-odl">
+                                                <rect key="frame" x="258" y="0.0" width="245" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="sVe-Lw-Ika">
-                                                <rect key="frame" x="249" y="0.0" width="117" height="79"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfh-fU-C2w">
+                                                <rect key="frame" x="508" y="0.0" width="245" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="0MZ-iw-ET8">
-                                                <rect key="frame" x="368" y="0.0" width="119" height="79"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRb-5p-itK">
+                                                <rect key="frame" x="758" y="0.0" width="245" height="150"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="5Em-UK-HT9">
-                                                <rect key="frame" x="490" y="0.0" width="55" height="80"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azb-kt-2Rj">
+                                                <rect key="frame" x="1008" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="WaX-fC-Ngt">
-                                                <rect key="frame" x="548" y="0.0" width="118" height="78"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7o-qu-b85">
+                                                <rect key="frame" x="1258" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="wdT-U2-D6y">
-                                                <rect key="frame" x="669" y="1" width="118" height="78"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxN-yU-p7s">
+                                                <rect key="frame" x="1508" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-56-XFn">
-                                                <rect key="frame" x="790" y="1" width="117" height="77"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMT-u3-pK9">
+                                                <rect key="frame" x="1758" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ly1-7r-72r">
+                                                <rect key="frame" x="2008" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6iG-PK-69M">
+                                                <rect key="frame" x="2258" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyu-tz-78S">
+                                                <rect key="frame" x="2508" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95X-a7-5ta">
+                                                <rect key="frame" x="2758" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anV-Ch-w7f">
+                                                <rect key="frame" x="3008" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJ2-Cw-BBC">
+                                                <rect key="frame" x="3258" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zla-zc-OOm">
+                                                <rect key="frame" x="3508" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfA-mn-7rk">
+                                                <rect key="frame" x="3758" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTQ-oR-5JV">
+                                                <rect key="frame" x="4008" y="0.0" width="245" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </scrollView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qfd-Rt-ym6">
-                                        <rect key="frame" x="0.0" y="250" width="375" height="29"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="middleline" translatesAutoresizingMaskIntoConstraints="NO" id="iN5-wh-fLz">
+                                        <rect key="frame" x="8" y="286" width="95" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="媒体库" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5c-ls-r40">
+                                        <rect key="frame" x="8" y="323" width="52" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNY-nv-mGS">
+                                        <rect key="frame" x="8" y="208" width="274" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jq7-fZ-7El">
+                                        <rect key="frame" x="8" y="239" width="187" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="outline (1) " translatesAutoresizingMaskIntoConstraints="NO" id="LQ7-Xi-u4e">
+                                        <rect key="frame" x="285" y="208" width="82" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="middleline" translatesAutoresizingMaskIntoConstraints="NO" id="GkW-8D-d5m">
+                                        <rect key="frame" x="8" y="538" width="95" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="正文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0w-Zs-2vi">
+                                        <rect key="frame" x="8" y="575" width="52" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" image="segment-10-1" translatesAutoresizingMaskIntoConstraints="NO" id="qSO-tu-BPr" userLabel="Detail Pic1">
+                                        <rect key="frame" x="0.0" y="653" width="375" height="1880"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundSegment" translatesAutoresizingMaskIntoConstraints="NO" id="NjI-GS-orT">
+                                        <rect key="frame" x="-12" y="610" width="387" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xyT-1I-fn8">
+                                        <rect key="frame" x="-1" y="617" width="375" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="建造历史"/>
                                             <segment title="空间体验"/>
-                                            <segment title="细部与材料"/>
+                                            <segment title="细部材料"/>
                                         </segments>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </segmentedControl>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="P6r-8Q-fRR">
-                                        <rect key="frame" x="27" y="278" width="69" height="3"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-O7-Umg">
+                                        <rect key="frame" x="28" y="649" width="61" height="3"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Barcelona Pavilion" id="uri-cz-m6W">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="dtH-Im-XsF">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="C0d-vC-3m7"/>
                     <connections>
-                        <outlet property="bottomView" destination="P6r-8Q-fRR" id="TVu-cx-w8X"/>
-                        <outlet property="detailPic1" destination="zBr-md-7eS" id="bTm-Uj-dna"/>
-                        <outlet property="detailPic2" destination="foH-FG-0YE" id="scp-WQ-sgA"/>
-                        <outlet property="detailPic3" destination="JHv-qK-LAT" id="8MC-Hh-96Z"/>
-                        <outlet property="detailScroll1" destination="FHz-XZ-3CR" id="8s4-BM-CrX"/>
-                        <outlet property="image1" destination="u9k-3o-fVH" id="foo-Tn-LQ0"/>
-                        <outlet property="picScroll" destination="o50-BI-4Qt" id="J9o-rd-2GX"/>
-                        <outlet property="segmentButton" destination="qfd-Rt-ym6" id="vDL-Rw-noL"/>
+                        <outlet property="backScroll" destination="nie-eg-BTj" id="iEQ-dO-mvS"/>
+                        <outlet property="chineseName" destination="BNY-nv-mGS" id="PR8-IL-uFh"/>
+                        <outlet property="detailPicture" destination="qSO-tu-BPr" id="S0U-TB-ceh"/>
+                        <outlet property="englishName" destination="jq7-fZ-7El" id="7Lu-KS-zyH"/>
+                        <outlet property="image0" destination="zol-fY-BD5" id="vxa-X7-btY"/>
+                        <outlet property="image1" destination="Eo5-NJ-odl" id="map-kp-oFX"/>
+                        <outlet property="image10" destination="tyu-tz-78S" id="NgG-bB-ctZ"/>
+                        <outlet property="image11" destination="95X-a7-5ta" id="xmd-4H-nVM"/>
+                        <outlet property="image12" destination="anV-Ch-w7f" id="QnO-gN-P0y"/>
+                        <outlet property="image13" destination="xJ2-Cw-BBC" id="uBv-vm-Adw"/>
+                        <outlet property="image14" destination="zla-zc-OOm" id="bde-1c-I5E"/>
+                        <outlet property="image15" destination="yfA-mn-7rk" id="Dta-GE-2aL"/>
+                        <outlet property="image16" destination="YTQ-oR-5JV" id="2yr-VT-Wcl"/>
+                        <outlet property="image2" destination="lfh-fU-C2w" id="TQ4-IU-nmU"/>
+                        <outlet property="image3" destination="MRb-5p-itK" id="iEi-Xt-b1S"/>
+                        <outlet property="image4" destination="azb-kt-2Rj" id="IcC-ZW-8Aj"/>
+                        <outlet property="image5" destination="Y7o-qu-b85" id="mqm-Fn-VT0"/>
+                        <outlet property="image6" destination="rxN-yU-p7s" id="dLH-ds-R6x"/>
+                        <outlet property="image7" destination="fMT-u3-pK9" id="DKI-tU-ywF"/>
+                        <outlet property="image8" destination="ly1-7r-72r" id="3ry-u3-eQv"/>
+                        <outlet property="image9" destination="6iG-PK-69M" id="NZd-fl-LRF"/>
+                        <outlet property="mainPicture" destination="GR2-6H-Des" id="Hhb-eh-0cX"/>
+                        <outlet property="outline" destination="LQ7-Xi-u4e" id="n29-eH-SZx"/>
+                        <outlet property="scrollPicture" destination="nv5-ZE-Tal" id="Cgf-xO-en2"/>
+                        <outlet property="segmentControl" destination="xyT-1I-fn8" id="vlk-e0-62J"/>
+                        <outlet property="underline" destination="0GE-O7-Umg" id="DJe-wa-eav"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OHP-Sf-b7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4978.3999999999996" y="-1977.6611694152925"/>
+            <point key="canvasLocation" x="4479.1999999999998" y="-2472.4137931034484"/>
         </scene>
         <!--选单-->
         <scene sceneID="eEA-dF-tCg">
@@ -170,7 +263,7 @@
                                     <outlet property="archMenuChineseName" destination="p6D-4w-7kA" id="TCX-EC-3tA"/>
                                     <outlet property="archMenuImage" destination="coc-Pk-oVv" id="H1a-YJ-72U"/>
                                     <outlet property="archMenuName" destination="JNE-EG-YNq" id="JtL-wn-HHZ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="hwX-cZ-ct3"/>
+                                    <segue destination="PuI-Mt-DXi" kind="show" identifier="showDetailSegue" id="2LC-au-JEM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -198,57 +291,193 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="mapdown" translatesAutoresizingMaskIntoConstraints="NO" id="Efx-yQ-K8s">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="43" width="375" height="575"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Qz-c8-G8g">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="43" width="375" height="575"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="mapup" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-cj-lcf">
-                                        <rect key="frame" x="0.0" y="0.0" width="978" height="603"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="mapup" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-cj-lcf">
+                                        <rect key="frame" x="0.0" y="0.0" width="912" height="575"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="13 intro" translatesAutoresizingMaskIntoConstraints="NO" id="WHp-CZ-uFd">
-                                        <rect key="frame" x="229" y="27" width="249" height="135"/>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-4" translatesAutoresizingMaskIntoConstraints="NO" id="N3a-rs-gtj">
+                                        <rect key="frame" x="463" y="173" width="107" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-Ut-aKx" userLabel="map13Button">
-                                        <rect key="frame" x="333" y="158" width="28" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-7x-I9J" userLabel="intro4Button">
+                                        <rect key="frame" x="501" y="307" width="21" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <action selector="map13Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="4vn-vr-cnJ"/>
+                                            <action selector="intro4Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="3Z7-iw-DWJ"/>
                                         </connections>
                                     </button>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="10 intro" translatesAutoresizingMaskIntoConstraints="NO" id="XXx-IL-lM7">
-                                        <rect key="frame" x="209" y="18" width="249" height="135"/>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-10" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-OA-VqN">
+                                        <rect key="frame" x="257" y="31" width="107" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oee-vD-q39">
-                                        <rect key="frame" x="229" y="36" width="249" height="105"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-jy-Wyq" userLabel="intro10Button">
+                                        <rect key="frame" x="296" y="164" width="24" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="QJd-JY-BkF"/>
+                                            <action selector="intro10Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="nWx-G6-sZG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRB-jy-Wyq" userLabel="map10Button">
-                                        <rect key="frame" x="310" y="147" width="28" height="37"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khd-Ut-aKx" userLabel="intro13Button">
+                                        <rect key="frame" x="319" y="176" width="22" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <action selector="mapButton10:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="nWx-G6-sZG"/>
+                                            <action selector="intro13Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="4vn-vr-cnJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-7x-I9J" userLabel="map4Button">
-                                        <rect key="frame" x="541" y="305" width="30" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <action selector="map4Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="3Z7-iw-DWJ"/>
-                                        </connections>
-                                    </button>
-                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="4 intro" translatesAutoresizingMaskIntoConstraints="NO" id="bsb-IA-4xK" userLabel="Map4Intro">
-                                        <rect key="frame" x="441" y="175" width="249" height="135"/>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-5" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-M9-CT2">
+                                        <rect key="frame" x="245" y="377" width="107" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOL-iG-wsl" userLabel="intro5Button">
+                                        <rect key="frame" x="284" y="513" width="25" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro5Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="LuE-LX-by5"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-7" translatesAutoresizingMaskIntoConstraints="NO" id="otQ-UE-off" userLabel="intro-7">
+                                        <rect key="frame" x="482" y="179" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctE-hs-xJM" userLabel="intro7Button">
+                                        <rect key="frame" x="522" y="317" width="14" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro7Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="2E7-S6-Mpu"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-8" translatesAutoresizingMaskIntoConstraints="NO" id="L4s-SI-cst">
+                                        <rect key="frame" x="489" y="179" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-16" translatesAutoresizingMaskIntoConstraints="NO" id="Avh-6x-bPp">
+                                        <rect key="frame" x="625" y="231" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZh-JR-m8H" userLabel="intro16Button">
+                                        <rect key="frame" x="665" y="368" width="25" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro16Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="TsE-t1-650"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-9" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-vv-84v">
+                                        <rect key="frame" x="655" y="5" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJP-HX-RVr" userLabel="intro9Button">
+                                        <rect key="frame" x="697" y="141" width="19" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro9Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="xEF-wc-kQe"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-14" translatesAutoresizingMaskIntoConstraints="NO" id="JSv-rO-shP">
+                                        <rect key="frame" x="704" y="4" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Gt-j0-5bL" userLabel="intro14Button">
+                                        <rect key="frame" x="748" y="141" width="19" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro14Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="1B9-Ns-7pY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-1" translatesAutoresizingMaskIntoConstraints="NO" id="yRg-Y2-QtB">
+                                        <rect key="frame" x="750" y="21" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDX-Bb-itd" userLabel="intro1Button">
+                                        <rect key="frame" x="791" y="156" width="25" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro1Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="gKe-PC-0h0"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-6" translatesAutoresizingMaskIntoConstraints="NO" id="GoF-wD-vSd">
+                                        <rect key="frame" x="681" y="16" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAZ-dq-gP0" userLabel="intro6Button">
+                                        <rect key="frame" x="724" y="150" width="18" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro6Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="rpr-It-WeI"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-11" translatesAutoresizingMaskIntoConstraints="NO" id="iOe-Pv-gNk">
+                                        <rect key="frame" x="702" y="31" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhA-eo-2Zi" userLabel="intro11Button">
+                                        <rect key="frame" x="745" y="170" width="18" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro11Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="d1k-ee-UTQ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-2" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-ue-qQY">
+                                        <rect key="frame" x="683" y="46" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDN-7J-q8q" userLabel="intro2Button">
+                                        <rect key="frame" x="722" y="181" width="24" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro2Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="sZo-Fe-xIj"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-15" translatesAutoresizingMaskIntoConstraints="NO" id="c42-cG-KCr">
+                                        <rect key="frame" x="726" y="48" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-lY-7Q0" userLabel="intro15Button">
+                                        <rect key="frame" x="766" y="183" width="24" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro15Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="VPt-aT-dRL"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-12" translatesAutoresizingMaskIntoConstraints="NO" id="5jy-EC-oI3">
+                                        <rect key="frame" x="623" y="62" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-4O-r0p" userLabel="intro12Button">
+                                        <rect key="frame" x="664" y="199" width="20" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro12Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="Qte-TJ-tVp"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-3" translatesAutoresizingMaskIntoConstraints="NO" id="3UG-77-tk5" userLabel="intro-3">
+                                        <rect key="frame" x="671" y="154" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS1-Nx-FZz" userLabel="intro3Button">
+                                        <rect key="frame" x="710" y="289" width="24" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro3Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="Ccf-lL-XbY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="intro-13" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-Py-tLi">
+                                        <rect key="frame" x="277" y="42" width="107" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDA-BE-pWb" userLabel="intro8Button">
+                                        <rect key="frame" x="536" y="317" width="20" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="intro8Button:" destination="hyI-S5-Gvb" eventType="touchUpInside" id="va0-gd-3E9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <inset key="scrollIndicatorInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </scrollView>
@@ -257,14 +486,39 @@
                     </view>
                     <navigationItem key="navigationItem" title="地图" id="XEV-6D-wdQ"/>
                     <connections>
+                        <outlet property="intro1" destination="yRg-Y2-QtB" id="x5m-D2-cQ3"/>
+                        <outlet property="intro10" destination="xDA-OA-VqN" id="I0a-q4-bjE"/>
+                        <outlet property="intro10Button" destination="IRB-jy-Wyq" id="wh8-e5-AUB"/>
+                        <outlet property="intro11" destination="iOe-Pv-gNk" id="J1m-Mg-gSo"/>
+                        <outlet property="intro11Button" destination="yhA-eo-2Zi" id="88J-Dg-1sc"/>
+                        <outlet property="intro12" destination="5jy-EC-oI3" id="Dwn-VA-fhs"/>
+                        <outlet property="intro12Button" destination="5Y7-4O-r0p" id="3Th-qT-EEF"/>
+                        <outlet property="intro13" destination="8qs-Py-tLi" id="Iw9-As-o5t"/>
+                        <outlet property="intro13Button" destination="Khd-Ut-aKx" id="tfj-wo-ASy"/>
+                        <outlet property="intro14" destination="JSv-rO-shP" id="EvI-tg-RXg"/>
+                        <outlet property="intro14Button" destination="1Gt-j0-5bL" id="qZL-m5-6qy"/>
+                        <outlet property="intro15" destination="c42-cG-KCr" id="cOE-RI-XMg"/>
+                        <outlet property="intro15Button" destination="lMW-lY-7Q0" id="TEh-44-I8F"/>
+                        <outlet property="intro16" destination="Avh-6x-bPp" id="9bJ-QB-eY4"/>
+                        <outlet property="intro16Button" destination="JZh-JR-m8H" id="pXi-OB-pgx"/>
+                        <outlet property="intro1Button" destination="ZDX-Bb-itd" id="2on-QX-s9R"/>
+                        <outlet property="intro2" destination="5d5-ue-qQY" id="pVO-LW-tHS"/>
+                        <outlet property="intro2Button" destination="YDN-7J-q8q" id="0Rf-oz-1Te"/>
+                        <outlet property="intro3" destination="3UG-77-tk5" id="tR7-3p-3qs"/>
+                        <outlet property="intro3Button" destination="IS1-Nx-FZz" id="oHb-0x-WVx"/>
+                        <outlet property="intro4" destination="N3a-rs-gtj" id="UaR-1X-1CF"/>
+                        <outlet property="intro4Button" destination="4KQ-7x-I9J" id="LBq-Vf-eN9"/>
+                        <outlet property="intro5" destination="MbN-M9-CT2" id="ULg-ZI-I7X"/>
+                        <outlet property="intro5Button" destination="rOL-iG-wsl" id="Qrf-9F-y9b"/>
+                        <outlet property="intro6" destination="GoF-wD-vSd" id="Y6Z-LY-Y1L"/>
+                        <outlet property="intro6Button" destination="dAZ-dq-gP0" id="IDx-hf-ZaV"/>
+                        <outlet property="intro7" destination="otQ-UE-off" id="UaK-vP-T4K"/>
+                        <outlet property="intro7Button" destination="ctE-hs-xJM" id="ONc-Il-H79"/>
+                        <outlet property="intro8" destination="L4s-SI-cst" id="2xi-cO-89g"/>
+                        <outlet property="intro8Button" destination="MDA-BE-pWb" id="lba-ZV-QFH"/>
+                        <outlet property="intro9" destination="e0R-vv-84v" id="J0R-qc-7to"/>
+                        <outlet property="intro9Button" destination="pJP-HX-RVr" id="Gvb-eu-WPY"/>
                         <outlet property="map" destination="rQ1-cj-lcf" id="ypm-UI-y0J"/>
-                        <outlet property="map10IntroButton" destination="oee-vD-q39" id="3RL-CX-5iC"/>
-                        <outlet property="map13Button" destination="Khd-Ut-aKx" id="tfj-wo-ASy"/>
-                        <outlet property="map13Intro" destination="WHp-CZ-uFd" id="Mo2-y2-zIn"/>
-                        <outlet property="map4Button" destination="4KQ-7x-I9J" id="LBq-Vf-eN9"/>
-                        <outlet property="map4Intro" destination="bsb-IA-4xK" id="pN8-vR-7Ru"/>
-                        <outlet property="mapButton10" destination="IRB-jy-Wyq" id="cDK-Xb-721"/>
-                        <outlet property="mapIntro10" destination="XXx-IL-lM7" id="xaU-Fz-QlA"/>
                         <outlet property="mapScroll" destination="1Qz-c8-G8g" id="nHB-Jh-Wsn"/>
                     </connections>
                 </viewController>
@@ -280,7 +534,7 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xrx-Y7-fau">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -360,7 +614,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcS-Ze-SGE" customClass="SwipeableCards" customModule="建筑之美" customModuleProvider="target">
-                                <rect key="frame" x="38" y="109" width="299" height="474"/>
+                                <rect key="frame" x="38" y="100" width="299" height="474"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
@@ -387,8 +641,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bob-Kq-V0M" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="摘录" image="cards-icon1" selectedImage="cards-icon1" id="Ujq-1S-GFG"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1eh-pi-9XS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1eh-pi-9XS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -407,7 +661,7 @@
                     <tabBarItem key="tabBarItem" title="地图" image="cards-icon3" selectedImage="cards-icon3" id="pGR-0C-W6a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ReK-gk-V3X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -425,8 +679,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PW7-E2-uf2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="cards-icon4" selectedImage="cards-icon4" id="xhw-Ub-Xgc"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lh6-Tx-PUG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lh6-Tx-PUG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -440,31 +694,34 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="397" height="250"/>
-        <image name="10 intro" width="1491" height="850"/>
-        <image name="13 intro" width="1491" height="850"/>
-        <image name="2" width="379" height="252"/>
-        <image name="3" width="384" height="261"/>
-        <image name="4" width="534" height="354"/>
-        <image name="4 intro" width="1491" height="850"/>
-        <image name="5" width="244" height="354"/>
-        <image name="6" width="380" height="252"/>
-        <image name="7" width="436" height="292"/>
-        <image name="8" width="398" height="263"/>
+        <image name="backgroundSegment" width="752" height="106"/>
         <image name="cards-icon1" width="28" height="28"/>
         <image name="cards-icon2" width="28" height="28"/>
         <image name="cards-icon3" width="28" height="28"/>
         <image name="cards-icon4" width="28" height="28"/>
         <image name="indicator" width="85" height="5"/>
-        <image name="main" width="2092" height="1479"/>
+        <image name="intro-1" width="172" height="242"/>
+        <image name="intro-10" width="516" height="728"/>
+        <image name="intro-11" width="172" height="242"/>
+        <image name="intro-12" width="172" height="242"/>
+        <image name="intro-13" width="172" height="242"/>
+        <image name="intro-14" width="172" height="242"/>
+        <image name="intro-15" width="172" height="242"/>
+        <image name="intro-16" width="172" height="242"/>
+        <image name="intro-2" width="172" height="242"/>
+        <image name="intro-3" width="172" height="242"/>
+        <image name="intro-4" width="172" height="242"/>
+        <image name="intro-5" width="172" height="242"/>
+        <image name="intro-6" width="172" height="242"/>
+        <image name="intro-7" width="172" height="242"/>
+        <image name="intro-8" width="172" height="242"/>
+        <image name="intro-9" width="172" height="242"/>
         <image name="mapdown" width="928" height="1500"/>
-        <image name="mapup" width="1500" height="928"/>
+        <image name="mapup" width="1000" height="658"/>
+        <image name="middleline" width="422" height="9"/>
         <image name="my" width="375" height="604"/>
-        <image name="segment 1" width="390" height="1246"/>
-        <image name="segment 2" width="390" height="1246"/>
-        <image name="segment 3" width="781" height="2491"/>
+        <image name="outline (1) " width="765" height="546"/>
+        <image name="playButton" width="245" height="244"/>
+        <image name="segment-10-1" width="1041" height="5200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="hwX-cZ-ct3"/>
-    </inferredMetricsTieBreakers>
 </document>

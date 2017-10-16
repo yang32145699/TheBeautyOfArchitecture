@@ -29,11 +29,11 @@ class SwipeableCardsVC: UIViewController, SwipeableCardsDataSource{
     
     
     func makeCardsData() -> () {
-        cardsData.append(UIImage(named: "cards1")!)
-        cardsData.append(UIImage(named: "cards2")!)
-//        cardsData.append(UIImage(named: "cards3")!)
-//        cardsData.append(UIImage(named: "cards4")!)
-        
+        for i in 1...16{
+            cardsData.append(UIImage(named: "cards\(i)")!)
+        }
+
+
     }
     
     // SwipeableCardsDataSource methods
@@ -57,5 +57,9 @@ class SwipeableCardsVC: UIViewController, SwipeableCardsDataSource{
         return imageView!
 
     }
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+
     
 }

@@ -14,6 +14,10 @@ class MenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes =
+            [NSForegroundColorAttributeName: UIColor.white]
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,7 +47,7 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "archCell", for: indexPath) as! MenuTableViewCell
 
-        cell.archMenuImage.image = arch[indexPath.row].image
+        cell.archMenuImage.image = arch[indexPath.row].menuImage
         cell.archMenuName.text = arch[indexPath.row].name
         cell.archMenuChineseName.text = arch[indexPath.row].chineseName
 
@@ -86,14 +90,27 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showDetailSegue"){
+            guard let archDetailVC = segue.destination as? DetailVC,
+                let selectedArchCell = sender as? MenuTableViewCell,
+                let indexPath = tableView.indexPath(for: selectedArchCell)
+                else{
+                    fatalError()
+            }
+            let selectedArch = arch[indexPath.row]
+            archDetailVC.arch = selectedArch
+        }
+
+    }
+
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
+
+    
 }
