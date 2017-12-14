@@ -47,23 +47,31 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
         map.addSubview(intro16)
         map.addSubview(intro16Button)
         introList = [intro1, intro2, intro3, intro4, intro5, intro6, intro7, intro8, intro9, intro10, intro11, intro12, intro13, intro14, intro15, intro16]
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mapScroll.setZoomScale(1.5, animated: true)
+        mapScroll.setZoomScale(1, animated: true)
     }
 
 
     @IBOutlet weak var mapScroll: UIScrollView!{
         didSet {
-            mapScroll.contentSize = map.frame.size
+            //            mapScroll.contentSize = map.frame.size
             mapScroll.contentOffset.x = 220
             mapScroll.delegate = self
-            
+
             //缩放
             mapScroll.minimumZoomScale = 1
             mapScroll.maximumZoomScale = 2.5
-            
+
             //水平进度条
             mapScroll.showsHorizontalScrollIndicator = true
         }
     }
+
     @IBOutlet weak var map: UIImageView!
 
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -73,7 +81,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
     //西班牙、法国
     //10.巴塞罗那德国馆
     @IBAction func intro10Button(_ sender: UIButton) {
-        hideAllIntros()
+        hideAllIntros(intro10)
         intro10.isHidden = (intro10.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro10Button: UIButton!
@@ -82,7 +90,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //4.萨伏依别墅
     @IBAction func intro4Button(_ sender: UIButton) {
-        hideAllIntros()
+        hideAllIntros(intro4)
         intro4.isHidden =  (intro4.isHidden == false) ?  true : false
     }
 
@@ -92,7 +100,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //13.米罗美术馆
     @IBAction func intro13Button(_ sender: UIButton) {
-        hideAllIntros()
+        hideAllIntros(intro13)
         intro13.isHidden =  (intro13.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro13Button: UIButton!
@@ -100,7 +108,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //7.
     @IBAction func intro7Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro7)
         intro7.isHidden =  (intro7.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro7Button: UIButton!
@@ -108,7 +116,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //8.
     @IBAction func intro8Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro8)
         intro8.isHidden =  (intro8.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro8Button: UIButton!
@@ -119,7 +127,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
     //芬兰和瑞士
     //5.
     @IBAction func intro5Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro5)
         intro5.isHidden =  (intro5.isHidden == false) ?  true : false
     }
 
@@ -128,7 +136,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //16.
     @IBAction func intro16Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro16)
         intro16.isHidden =  (intro16.isHidden == false) ?  true : false
     }
 
@@ -140,7 +148,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
     //德国
     //9.
     @IBAction func intro9Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro9)
         intro9.isHidden =  (intro9.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro9Button: UIButton!
@@ -149,7 +157,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //14.
     @IBAction func intro14Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro14)
         intro14.isHidden =  (intro14.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro14Button: UIButton!
@@ -158,7 +166,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //6.
     @IBAction func intro6Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro6)
         intro6.isHidden =  (intro6.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro6Button: UIButton!
@@ -167,7 +175,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //11.
     @IBAction func intro11Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro11)
         intro11.isHidden =  (intro11.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro11Button: UIButton!
@@ -176,7 +184,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //1.
     @IBAction func intro1Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro1)
         intro1.isHidden =  (intro1.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro1Button: UIButton!
@@ -185,7 +193,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //2.
     @IBAction func intro2Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro2)
         intro2.isHidden =  (intro2.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro2Button: UIButton!
@@ -194,7 +202,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //15.
     @IBAction func intro15Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro15)
         intro15.isHidden =  (intro15.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro15Button: UIButton!
@@ -203,7 +211,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
     //12.
     @IBAction func intro12Button(_ sender: Any) {
-        hideAllIntros()
+        hideAllIntros(intro12)
         intro12.isHidden =  (intro12.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro12Button: UIButton!
@@ -211,7 +219,8 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
 
     //3.
-    @IBAction func intro3Button(_ sender: Any) {hideAllIntros()
+    @IBAction func intro3Button(_ sender: Any) {
+        hideAllIntros(intro3)
         intro3.isHidden =  (intro3.isHidden == false) ?  true : false
     }
     @IBOutlet weak var intro3Button: UIButton!
@@ -219,7 +228,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
 
 
 
-    func hideAllIntros(){
+    func hideAllIntros(_ except: UIImageView){
         for i in introList {
             if i.isHidden == false{
                 intro1.isHidden = true
@@ -238,6 +247,7 @@ class MapViewController: UIViewController,UIScrollViewDelegate {
                 intro14.isHidden = true
                 intro15.isHidden = true
                 intro16.isHidden = true
+                except.isHidden = false
             }
         }
     }

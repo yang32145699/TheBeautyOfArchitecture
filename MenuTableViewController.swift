@@ -95,7 +95,9 @@ class MenuTableViewController: UITableViewController {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         if (segue.identifier == "showDetailSegue"){
+
             guard let archDetailVC = segue.destination as? DetailVC,
                 let selectedArchCell = sender as? MenuTableViewCell,
                 let indexPath = tableView.indexPath(for: selectedArchCell)

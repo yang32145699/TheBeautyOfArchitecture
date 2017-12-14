@@ -39,6 +39,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var englishName: UILabel!
     @IBOutlet weak var outline: UIImageView!
 
+    @IBOutlet weak var backgroundSegment: UIImageView!
     @IBOutlet weak var backScroll: UIScrollView!
 
     var imageList: [UIImageView]!
@@ -47,6 +48,9 @@ class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageList = [image0,image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16]
+
+//        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipeFunc))
+//        detailPicture.addGestureRecognizer(leftSwipe)
 
         let tap0 = UITapGestureRecognizer(target: self, action: #selector(imageTap0))
         let tap1 = UITapGestureRecognizer(target: self, action: #selector(imageTap1))
@@ -84,12 +88,20 @@ class DetailVC: UIViewController {
         image15.addGestureRecognizer(tap15)
         image16.addGestureRecognizer(tap16)
 
+        underline.center.x = segmentControl.center.x/3
+        underline.frame = CGRect(x: segmentControl.center.x/3 - 32, y: backgroundSegment.frame.maxY - 8, width: 64, height: 5)
+
+
+
 //        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(imageSwipe))
 
         segmentControl.addTarget(self, action: #selector(segmentedChanged(_:)), for: UIControlEvents.valueChanged)
-        backScroll.contentSize = CGSize(width: 0, height: 2540)
+        backScroll.contentSize = CGSize(width: 0, height: 2535)
 
         segmentControl.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black, NSFontAttributeName:UIFont.systemFont(ofSize: 18)], for: .normal)
+        segmentControl.setTitle(arch?.text[0], forSegmentAt: 0)
+        segmentControl.setTitle(arch?.text[1], forSegmentAt: 1)
+        segmentControl.setTitle(arch?.text[2], forSegmentAt: 2)
 
         segmentControl.setTitleTextAttributes([NSFontAttributeName:UIFont.boldSystemFont(ofSize: 18)], for: .selected)
 
@@ -110,7 +122,7 @@ class DetailVC: UIViewController {
         title = arch?.name
 
         mainPicture.image = arch?.mainImage
-        detailPicture.image = UIImage(named: "segment-10-1")
+        detailPicture.image = arch?.detailList![0]
         outline.image = arch?.outline
 
         if let list = arch?.imageList{
@@ -121,6 +133,30 @@ class DetailVC: UIViewController {
             }
         }
     }
+
+//    // MARK: - 照片左划切下一张
+//    func leftSwipeFunc() {
+//        if let nowImage = detailPicture.image{
+//            switch nowImage {
+//            case (arch?.detailList![0])!:
+//                detailPicture.image = arch?.detailList![1]
+//                segmentControl?.selectedSegmentIndex = 1
+//
+//            case (arch?.detailList![1])!:
+//                detailPicture.image = arch?.detailList![2]
+//                segmentControl?.selectedSegmentIndex = 2
+//            case (arch?.detailList![2])!:
+//                detailPicture.image = arch?.detailList![0]
+//                segmentControl?.selectedSegmentIndex = 0
+//                UIView.animate(withDuration: 0.25, animations:{
+//                    self.underline.center.x = self.segmentControl.center.x/3})
+//
+//            default:
+//                break
+//            }
+//        }
+//    }
+
 
     // MARK: - 点击放大图片
 
@@ -214,18 +250,18 @@ class DetailVC: UIViewController {
     func segmentedChanged(_ segmentedControl: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            detailPicture.image = #imageLiteral(resourceName: "segment-10-1.png")
+            detailPicture.image = arch?.detailList![0]
             UIView.animate(withDuration: 0.25, animations:{
                 self.underline.center.x = segmentedControl.center.x/3})
         //           detailScroll1.contentOffset = CGPoint(x: 0, y: -64)
         case 1:
-            detailPicture.image = #imageLiteral(resourceName: "segment-10-2.png")
+            detailPicture.image = arch?.detailList![1]
             UIView.animate(withDuration: 0.25, animations:{
                 self.underline.center.x = segmentedControl.center.x})
 
         //            detailScroll1.contentOffset = CGPoint(x: 0, y: -64)
         case 2:
-            detailPicture.image = #imageLiteral(resourceName: "segment-10-3.png")
+            detailPicture.image = arch?.detailList![2]
             UIView.animate(withDuration: 0.25, animations:{
                 self.underline.center.x = segmentedControl.center.x*10/6})
         //           detailScroll1.contentOffset = CGPoint(x: 0, y: -64)
